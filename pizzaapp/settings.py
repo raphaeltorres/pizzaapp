@@ -55,7 +55,7 @@ ROOT_URLCONF = 'pizzaapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['pizza'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

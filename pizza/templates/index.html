@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{title}}</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="container">
+  <h1>{{title}}</h1>
+
+  <table class="table  table-sm table-hover table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Pizza Type</th>
+        <th scope="col">Total Sold</th>
+        <th scope="col">Total Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% if pizza %}
+        {% for row in pizza %}
+          <tr>
+            <td>{{row.name}}</td>
+            <td>{{row.price}}</td>
+            <td>{{row.pizza_type__name}}</td>
+            <td>{{row.total_sold}}</td>
+            <td>{% if row.total_price %} {{ row.total_price }} {% else %} 0 {% endif %}</td>
+          </tr>
+        {% endfor %}
+      {% else %}
+        <tr>
+          <th scope="row" colspan="5"><center>No Record Found</center></th>
+        </tr>
+      {% endif %}
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

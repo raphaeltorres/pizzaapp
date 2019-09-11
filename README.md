@@ -9,5 +9,16 @@ Clone Repo
  - source pizzaapp/bin/activate
 
  Install django
- -  pip install -r requirements.txt
- 
+ - pip install -r requirements.txt
+ - python manage.py migrate
+ - python manage.py runserver
+
+ Commands
+
+ Create pizza - python manage.py pizza
+
+ Sell pizza - python manage.py pizza_transaction
+
+ Pizza List
+
+ http://localhost:8000/
