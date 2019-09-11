@@ -8,4 +8,6 @@ Clone Repo
  Activate virtualenv
  - source pizzaapp/bin/activate
 
+ Install django
+ -  pip install -r requirements.txt
  
